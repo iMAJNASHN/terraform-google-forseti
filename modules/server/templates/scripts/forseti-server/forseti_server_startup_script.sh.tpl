@@ -2,6 +2,10 @@
 exec > /tmp/deployment.log
 exec 2>&1
 
+# forseti_conf_server digest: ${forseti_conf_server_checksum}
+# This digest is included in the startup script to rebuild the Forseti server VM
+# whenever the server configuration changes.
+
 # Ubuntu update.
 sudo apt-get update -y
 sudo apt-get upgrade -y
